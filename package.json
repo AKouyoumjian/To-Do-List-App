@@ -2,7 +2,7 @@
   "name": "todolistproject",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://AKouyoumjian.github.io/To-Do-List-App",
+  "homepage": "https://akouyoumjian.github.io/To-Do-List-App/",
   "type": "module",
   "scripts": {
     "dev": "vite",
