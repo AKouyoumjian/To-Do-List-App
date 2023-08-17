@@ -72,7 +72,7 @@ export default function App() {
         </ul>
 
         <img
-          src="../checkListImage.jpeg"
+          src="https://st.depositphotos.com/3246347/4376/i/450/depositphotos_43769085-stock-photo-check-list.jpg"
           alt="Checklist Image"
           id="checkListImage"
         />
