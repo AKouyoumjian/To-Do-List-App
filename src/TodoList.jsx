@@ -1,6 +1,6 @@
 import { ListItem } from "./ListItem";
 
-// makes the todo list being given the todos, 
+// makes the todo list being given the todos,
 // and the toggle and delete todo functions
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
@@ -12,12 +12,14 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
 
       {todos.map((todo) => {
         return (
-          <ListItem id={todo.id} 
-          completed={todo.completed}
-          title={todo.title}
-          key={todo.id} 
-          toggleTodo={toggleTodo}
-          deleteTodo={deleteTodo}/>
+          <ListItem
+            id={todo.id}
+            completed={todo.completed}
+            title={todo.title}
+            key={todo.id}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}
+          />
         );
       })}
     </ul>

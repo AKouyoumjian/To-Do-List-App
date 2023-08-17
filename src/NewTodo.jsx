@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export function NewTodo({addTodo}) {
+export function NewTodo({ addTodo }) {
   // new item and function to update new item
-  const [newItem, setNewItem] = useState("")
+  const [newItem, setNewItem] = useState("");
 
   // function to handle submission of new todo
   function handleSubmit(e) {
@@ -10,11 +10,9 @@ export function NewTodo({addTodo}) {
 
     if (newItem === "") return;
 
-
     // this function is passed in the function, addTodo, from App.jsx
     // this is a passed down prop.
     addTodo(newItem);
-
 
     // now that a todo has been submitted, clear the newItem box
     setNewItem("");
@@ -23,7 +21,7 @@ export function NewTodo({addTodo}) {
   return (
     <form onSubmit={handleSubmit} className="new-item-form">
       <div className="form-row">
-        <label htmlFor="item"> New Item</label>
+        <label htmlFor="item"> Enter New Item</label>
         <input
           value={newItem}
           // update the value of input to be whats typed
