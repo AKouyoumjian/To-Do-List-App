@@ -1,3 +1,4 @@
+// App.jsx is default function for the todo list app.
 import { useEffect } from "react";
 import { useState } from "react";
 import { NewTodo } from "./NewTodo";
@@ -64,6 +65,15 @@ export default function App() {
     //passing in broken up components
     //fragment used to return multiple elements for component
     <>
+      <NewTodo addTodo={addTodo} />
+
+      <h1 className="header">
+        {" "}
+        <u> Your Todo List</u>{" "}
+      </h1>
+
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+
       <div className="infoText">
         <ul>
           <li>Welcome! Make your own to-do list!</li>
@@ -85,15 +95,6 @@ export default function App() {
           Created by: Alex Kouyoumjian
         </a>
       </div>
-
-      <NewTodo addTodo={addTodo} />
-
-      <h1 className="header">
-        {" "}
-        <u> Your Todo List</u>{" "}
-      </h1>
-
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </>
   );
 }

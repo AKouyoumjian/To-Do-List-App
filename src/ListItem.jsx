@@ -1,3 +1,4 @@
+// This component makes the todo items in the todo list 
 export function ListItem({ completed, id, title, toggleTodo, deleteTodo }) {
   return (
     <li>

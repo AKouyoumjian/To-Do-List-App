@@ -1,3 +1,4 @@
+// This component makes the ToDo list
 import { ListItem } from "./ListItem";
 
 // makes the todo list being given the todos,

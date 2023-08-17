@@ -1,3 +1,4 @@
+// This component makes a new Todo item, handling the submission and adding it to the list.
 import { useState } from "react";
 
 export function NewTodo({ addTodo }) {
@@ -5,10 +6,13 @@ export function NewTodo({ addTodo }) {
   const [newItem, setNewItem] = useState("");
 
   // function to handle submission of new todo
-  function handleSubmit(e) {
+  function handleSubmission(e) {
     e.preventDefault();
 
-    if (newItem === "") return;
+    // if there is no new item yet, just return
+    if (newItem === "") {
+      return;
+    }
 
     // this function is passed in the function, addTodo, from App.jsx
     // this is a passed down prop.
@@ -19,7 +23,7 @@ export function NewTodo({ addTodo }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="new-item-form">
+    <form onSubmit={handleSubmission} className="new-item-form">
       <div className="form-row">
         <label htmlFor="item"> Enter New Item</label>
         <input
