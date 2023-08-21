@@ -8,7 +8,7 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
     <ul className="list">
       {
         // short-circuiting, if lenght===0, displays "No Todos"
-        todos.length === 0 && "No tasks listed"
+        todos.length === 0 && "No tasks left to do!"
       }
 
       {todos.map((todo) => {
